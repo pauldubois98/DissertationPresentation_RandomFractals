@@ -9,6 +9,7 @@
 \usepackage{mathtools}
 \usepackage{nicefrac}
 \usepackage{makecell}
+\definecolor{brickred}{rgb}{0.7,0,0}
 
 
 %commands
@@ -62,7 +63,9 @@
 	\begin{frame}
 	    \frametitle{The Percolation Process}
 	    \framesubtitle{Plain: $P \sim \pperc{n}{p}$}
-		$$B_{i,j} = \left[\frac{i-1}{n},\frac{i}{n}\right] \times \left[ \frac{j-1}{n},\frac{j}{n}\right] $$
+		\only<1-2>{
+			$$B_{i,j} = \left[\frac{i-1}{n},\frac{i}{n}\right] \times \left[ \frac{j-1}{n},\frac{j}{n}\right] $$
+		}
 		\only<1>{
 			\begin{center}
 				\includegraphics[scale=0.18]{imgs/percolationPlain.png}
@@ -76,11 +79,23 @@
 			%$$D>0 \iff P \neq \emptyset$$
 			%$$\E(D) = 1$$
 		}
+		\only<3>{
+			\begin{center}
+				\includegraphics[scale=0.6]{imgs/perc_fig0.png}
+			\end{center}
+		}
+		\only<4>{
+			\begin{center}
+				\includegraphics[scale=0.6]{imgs/perc_fig1.png}
+			\end{center}
+		}
 	\end{frame}
 	\begin{frame}
 		\frametitle{The Percolation Process}
 	    \framesubtitle{Recursive: $P_d \sim \rperc{n}{p}{d}$}		
-		$$B_{i,j}^d = \left[\frac{i-1}{n^d},\frac{i}{n^d}\right] \times \left[ \frac{j-1}{n^d},\frac{j}{n^d}\right] $$
+		\only<1-2>{
+			$$B_{i,j}^d = \left[\frac{i-1}{n^d},\frac{i}{n^d}\right] \times \left[ \frac{j-1}{n^d},\frac{j}{n^d}\right] $$
+		}
 		\only<1>{
 			\begin{center}
 				\includegraphics[scale=0.17]{imgs/percolationRecursive.png}
@@ -96,16 +111,31 @@
 			$$Z_d = \abs{ \left\lbrace  (i,j) \mid \epsilon_{i,j}^d=1 \right\rbrace }$$
 			$$D_d = \frac{Z_d}{(pn^2)^d}$$
 		}
+		\only<3>{
+			\begin{center}
+				\includegraphics[scale=0.6]{imgs/perc_fig0.png}
+			\end{center}
+		}
+		\only<4>{
+			\begin{center}
+				\includegraphics[scale=0.6]{imgs/perc_fig1.png}
+			\end{center}
+		}
+		\only<5>{
+			\begin{center}
+				\includegraphics[scale=0.6]{imgs/perc_fig2.png}
+			\end{center}
+		}
 	\end{frame}
 	\begin{frame}
 		\frametitle{The Percolation Process}
 		\framesubtitle{Limit: $P_{\infty} \sim \perc{n}{p}$}		
 		$$P_{\infty} = \bigcap_{d \in \N} P_d$$
 		$$D_{\infty} = \lim_{d \to \infty} D_d$$
+		\vspace*{1cm}
 		\pause
 		$$D_{\infty}>0 \iff P_{\infty} \neq \emptyset$$
 		$$\E(D_{\infty}) = 1$$
-		
 	\end{frame}
 
 	\begin{frame}
@@ -147,10 +177,32 @@
 		\end{center}
 	\end{frame}
 
-	
+	\begin{frame}
+		\frametitle{Dimensions}
+		\framesubtitle{Intuition}
+		\begin{itemize}
+			\pause
+			\item[$1D$:] Scale by $\lambda$ $\iff$ Lengths multiplied by $\lambda^1$
+			\pause
+			\item[$2D$:] Scale by $\lambda$ $\iff$ Areas multiplied by $\lambda^2$
+			\pause
+			\item[$3D$:] Scale by $\lambda$ $\iff$ Volumes multiplied by $\lambda^3$
+			\pause
+			\item[$\dots$]
+			\item[$nD$:] Scale by $\lambda$ $\iff$ n-Dim. Volumes multiplies by $\lambda^n \quad \forall n \in \N$
+			\pause
+			\item[\color{purple} $\dots$]
+			\item[\color{red} $\alpha D$:] \color{brickred} Scale by $\lambda$ $\iff$ n-Dim. Volumes multiplies by $\lambda^{\alpha} \quad \forall \alpha \in \R^+$
+		\end{itemize}
+	\end{frame}
 	\begin{frame}
 		\frametitle{Dimensions}
 		\framesubtitle{Percolation dimensions}
+		For $P \sim \perc{n}{p}$, scaling by $n$ gives $pn^2$ copies of $P$.
+		\begin{center}
+			\includegraphics[scale=0.4]{imgs/perc_fig2.png}
+		\end{center}
+		So $\dim(P) = pn^2$.
 		
 	\end{frame}
 	
