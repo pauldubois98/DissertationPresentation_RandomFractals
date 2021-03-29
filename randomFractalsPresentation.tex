@@ -105,6 +105,11 @@
 				\includegraphics[scale=0.6]{imgs/perc_fig1.png}
 			\end{center}
 		}
+		\only<5>{
+			\begin{center}
+				\includegraphics[scale=0.6]{imgs/perc_fig2.png}
+			\end{center}
+		}
 	\end{frame}
 	\begin{frame}
 		\frametitle{The Percolation Process}
@@ -140,6 +145,16 @@
 		\only<5>{
 			\begin{center}
 				\includegraphics[scale=0.6]{imgs/perc_fig2.png}
+			\end{center}
+		}
+		\only<6>{
+			\begin{center}
+				\includegraphics[scale=0.6]{imgs/perc_fig3.png}
+			\end{center}
+		}
+		\only<7>{
+			\begin{center}
+				\includegraphics[scale=0.6]{imgs/perc_fig4.png}
 			\end{center}
 		}
 	\end{frame}
@@ -192,6 +207,14 @@
 			\only<4>{\includegraphics[scale=0.5]{imgs/perc5step3.png}}
 		\end{center}
 	\end{frame}
+
+	\begin{frame}
+		\frametitle{The Percolation Process}
+		\framesubtitle{In larger dimensions}
+		The definition extends to higher dimensions by adding components.
+		
+		For computation reasons (curse of dimensionality), we only consider the 2D and 3D cases.
+	\end{frame}
 	
 	
 	%%%%%%%%%%%%%%%%%%%%
@@ -221,9 +244,9 @@
 		\framesubtitle{Percolation dimensions}
 		For $P \sim \perc{n}{p}$, scaling by $n$ gives $pn^2$ copies of $P$.
 		\begin{center}
-			\includegraphics[scale=0.4]{imgs/perc_fig2.png}
+			\includegraphics[scale=0.4]{imgs/perc_fig3.png}
 		\end{center}
-		So $\dim(P) = pn^2$.
+		So $\dim(P) = \frac{log(pn^2)}{log(n)} = 2 + \frac{log(p)}{log(n)} \leq 2$.
 		
 	\end{frame}
 	
@@ -329,9 +352,7 @@
 	\begin{frame}
 		\frametitle{Crossings Probability}
 		\framesubtitle{Non-Straight Crossing, Recursive Percolation, 2D}
-		\begin{center}
-			\includegraphics[scale=0.5]{imgs/crossing_proba_2D.png}
-		\end{center}
+		\includegraphics[scale=0.5]{imgs/crossing_proba_2D.png}
 	\end{frame}
 	\begin{frame}
 		\frametitle{Crossings Probability}
@@ -373,13 +394,30 @@
 		\only<1>{\includegraphics[scale=0.5]{imgs/crossing_proba_3D_bis.png}}
 		\only<2>{\includegraphics[scale=0.5]{imgs/semi_straight_crossing_proba_3D_bis.png}}
 	\end{frame}
-	
-	
-	
+	%%%%%%%%%%%%%
 	\begin{frame}
 		\frametitle{Crossings Probability}
-		\framesubtitle{Straight Crossing}
-		% Straight Crossing theory & results
+		\framesubtitle{Straight Crossing, Recursive Percolation, 2D}
+		\only<1>{\includegraphics[scale=0.5]{imgs/crossing_proba_2D.png}}
+		\only<2>{\includegraphics[scale=0.5]{imgs/semi_straight_crossing_proba_2D.png}}		\only<3>{\includegraphics[scale=0.5]{imgs/straight_crossing_proba_2D.png}}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Crossings Probability}
+		\framesubtitle{Straight Crossing, Recursive Percolation, 3D}
+		\only<1>{\includegraphics[scale=0.5]{imgs/crossing_proba_3D.png}}
+		\only<2>{\includegraphics[scale=0.5]{imgs/semi_straight_crossing_proba_3D.png}}		\only<3>{\includegraphics[scale=0.5]{imgs/straight_crossing_proba_3D.png}}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Crossings Probability}
+		\framesubtitle{Straight Crossing, Uniform Percolation, 2D}
+		\only<1>{\includegraphics[scale=0.5]{imgs/crossing_proba_2D_ter.png}}
+		\only<2>{\includegraphics[scale=0.5]{imgs/semi_straight_crossing_proba_2D_ter.png}}	\only<3>{\includegraphics[scale=0.5]{imgs/straight_crossing_proba_2D_ter.png}}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Crossings Probability}
+		\framesubtitle{Straight Crossing, Uniform Percolation, 3D}
+		\only<1>{\includegraphics[scale=0.5]{imgs/crossing_proba_3D_bis.png}}
+		\only<2>{\includegraphics[scale=0.5]{imgs/semi_straight_crossing_proba_3D_bis.png}}	\only<3>{\includegraphics[scale=0.5]{imgs/straight_crossing_proba_3D_bis.png}}
 	\end{frame}
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -530,11 +568,51 @@
 	%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%
-	\section{Intersection}
-	\begin{frame}
-		\frametitle{Intersection}
-		
-	\end{frame}
+%	\section{Intersection}
+%	\begin{frame}
+%		\frametitle{Intersection}
+%		\framesubtitle{$n=2$, Recursive Percolation, 2D}
+%		\only<1>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=2^1.png}}
+%		\only<2>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=2^2.png}}
+%		\only<3>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=2^3.png}}
+%		\only<4>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=2^4.png}}
+%		\only<5>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=2^5.png}}
+%		\only<6>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=2^6.png}}
+%		\only<7>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=2^7.png}}
+%		\only<8>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=2^8.png}}
+%	\end{frame}
+%	\begin{frame}
+%		\frametitle{Intersection}
+%		\framesubtitle{$n=3$, Recursive Percolation, 2D}
+%		\only<1>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=3^1.png}}
+%		\only<2>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=3^2.png}}
+%		\only<3>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=3^3.png}}
+%		\only<4>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=3^4.png}}
+%		\only<5>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=3^5.png}}
+%	\end{frame}
+%	\begin{frame}
+%		\frametitle{Intersection}
+%		\framesubtitle{$n=5$, Recursive Percolation, 2D}
+%		\only<1>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=5^1.png}}
+%		\only<2>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=5^2.png}}
+%		\only<3>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=5^3.png}}
+%	\end{frame}
+%	\begin{frame}
+%		\frametitle{Intersection}
+%		\framesubtitle{Uniform Percolation, 2D}
+%		\only<1>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=7^1.png}}
+%		\only<2>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=11^1.png}}
+%		\only<3>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=13^1.png}}
+%		\only<4>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=20^1.png}}
+%		\only<5>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=25^1.png}}
+%		\only<6>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=50^1.png}}
+%		\only<7>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=75^1.png}}
+%		\only<8>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=100^1.png}}
+%		\only<9>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=125^1.png}}
+%		\only<10>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=150^1.png}}
+%		\only<11>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=175^1.png}}
+%		\only<12>{\includegraphics[scale=0.6]{imgs/intersection_2D_n^d=200^1.png}}
+%	\end{frame}
 
 	%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%
@@ -542,9 +620,58 @@
 	\section{Projection}
 	\begin{frame}
 		\frametitle{Projection}
-		
+		\framesubtitle{$n=2$, Recursive Percolation, 2D}
+		\only<1>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=2^1.png}}
+		\only<2>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=2^2.png}}
+		\only<3>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=2^3.png}}
+		\only<4>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=2^4.png}}
+		\only<5>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=2^5.png}}
+		\only<6>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=2^6.png}}
+		\only<7>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=2^7.png}}
+		\only<8>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=2^8.png}}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Projection}
+		\framesubtitle{$n=3$, Recursive Percolation, 2D}
+		\only<1>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=3^1.png}}
+		\only<2>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=3^2.png}}
+		\only<3>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=3^3.png}}
+		\only<4>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=3^4.png}}
+		\only<5>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=3^5.png}}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Projection}
+		\framesubtitle{$n=5$, Recursive Percolation, 2D}
+		\only<1>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=5^1.png}}
+		\only<2>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=5^2.png}}
+		\only<3>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=5^3.png}}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Projection}
+		\framesubtitle{Uniform Percolation, 2D}
+		\only<1>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=7^1.png}}
+		\only<2>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=11^1.png}}
+		\only<3>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=13^1.png}}
+		\only<4>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=20^1.png}}
+		\only<5>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=25^1.png}}
+		\only<6>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=50^1.png}}
+		\only<7>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=75^1.png}}
+		\only<8>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=100^1.png}}
+		\only<9>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=125^1.png}}
+		\only<10>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=150^1.png}}
+		\only<11>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=175^1.png}}
+		\only<12>{\includegraphics[scale=0.6]{imgs/projection_2D_n^d=200^1.png}}
 	\end{frame}
 
+
+	\section{Application}
+	\begin{frame}
+		\frametitle{Application to physics}
+		
+		\includegraphics[scale=0.25]{hubble1.jpg}
+		
+		"Hubble Ultra Deep Field"
+	\end{frame}
 	
 
 \end{document}
